@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 /**
  *@author Dvorenenko
  */
-public class TaskWork1 {
+public class TaskWork2 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
