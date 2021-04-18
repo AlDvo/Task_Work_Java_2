@@ -16,20 +16,16 @@ public class TaskWork5 {
         }
 
         double sum(){
-            double sum = one + two;
-            return sum;
+            return one + two;
         }
         double minus(){
-            double minus = one - two;
-            return minus;
+            return one - two;
         }
         double proizv(){
-            double proizv = one * two;
-            return proizv;
+            return one * two;
         }
         double delenie(){
-            double delenie = one / two;
-            return delenie;
+            return one / two;
         }
     }
     public static void main(String[] args) throws IOException{
