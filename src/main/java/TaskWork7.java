@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import static jdk.nashorn.internal.objects.Global.Infinity;
+
 public class TaskWork7 {
 
     static class Calc {
@@ -59,7 +61,11 @@ public class TaskWork7 {
             case ("вычитание"):System.out.printf("Вычитание чисел  = %.4f", calc.minus());
                 break;
             case ("деление"):
+                if (calc.delenie() == Infinity){
+                    System.out.println("Введите значение второго числа , отличное от нуля");
+                } else {
                 System.out.printf("Деление чисел  = %.4f", calc.delenie());
+                }
                 break;
             case ("умножение"):System.out.printf("Произведение чисел  = %.4f", calc.proizv());
                 break;
