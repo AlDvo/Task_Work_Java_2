@@ -6,6 +6,12 @@ import static jdk.nashorn.internal.objects.Global.Infinity;
 
 public class TaskWork7 {
 
+    public static class Zero extends Exception{
+        public Zero(String message){
+            super(message);
+        }
+    }
+
     static class Calc {
         double one;
         double two;
@@ -30,7 +36,7 @@ public class TaskWork7 {
             return one / two;
         }
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, Zero {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         // считываем числа с клавиатуры
         System.out.print("Введите первое число ");
@@ -62,7 +68,7 @@ public class TaskWork7 {
                 break;
             case ("деление"):
                 if (calc.delenie() == Infinity){
-                    System.out.println("Введите значение второго числа , отличное от нуля");
+                   throw new Zero("Деление на ноль");
                 } else {
                 System.out.printf("Деление чисел  = %.4f", calc.delenie());
                 }
