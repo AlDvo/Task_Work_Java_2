@@ -43,15 +43,19 @@ public class TaskWork7 {
         double one = 0;
         try {
             one = Double.parseDouble(reader.readLine());
-        } catch (NumberFormatException | IOException e) {
+        } catch (IOException e) {
             System.out.println("Не введено первое число");
+        }catch (NumberFormatException  e) {
+            System.out.println("Не правильный формат числа");
         }
 
         System.out.print("Введите второе число ");
         double two = 0;
         try {
             two = Double.parseDouble(reader.readLine());
-        } catch (NumberFormatException | IOException e) {
+        } catch (NumberFormatException  e) {
+            System.out.println("Не правильный формат числа");
+        }catch (IOException e) {
             System.out.println("Не введено второе число");
         }
         // Запрашивем название операции
