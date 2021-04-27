@@ -71,7 +71,7 @@ public class TaskWork7 {
             case ("вычитание"):System.out.printf("Вычитание чисел  = %.4f", calc.minus());
                 break;
             case ("деление"):
-                if (calc.delenie() == Infinity){
+                if (Double.isInfinite(calc.delenie())){
                    throw new Zero("Деление на ноль");
                 } else {
                 System.out.printf("Деление чисел  = %.4f", calc.delenie());
